@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var arrayOfIngredients: [Ingredient] = [Ingredient]()
     
     override func viewDidLoad() {
+        ingredientsTable.keyboardDismissMode = UIScrollViewKeyboardDismissMode.OnDrag
         super.viewDidLoad()
         self.setupIngredient()
         refreshUI()
@@ -89,7 +90,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             arrayOfIngredients.append(newIngredient)
             let nextIndexPath=NSIndexPath(forRow: indexPath!.row + 1, inSection: indexPath!.section);
             self.ingredientsTable.insertRowsAtIndexPaths([nextIndexPath], withRowAnimation: UITableViewRowAnimation.Fade)
-//            self.refreshUI()
         }
     }
     
@@ -108,8 +108,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let view = textField.superview!
         let cell = view.superview as! LembasTableViewCell
         let indexPath = ingredientsTable.indexPathForCell(cell)
+        let textVal = Double(textField.text!)
         
-        arrayOfIngredients[indexPath!.row].oldQty = Double(textField.text!)!
+        if(textVal != nil) {
+            arrayOfIngredients[indexPath!.row].oldQty = textVal!
+        }
     }
 }
 
