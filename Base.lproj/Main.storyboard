@@ -20,13 +20,14 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Yield" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v5M-66-Kyr">
                                 <rect key="frame" x="111" y="72" width="75" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="861-E9-UeY"/>
                                     <constraint firstAttribute="width" constant="75" id="VuZ-eW-fRF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12g-n3-wd4">
-                                <rect key="frame" x="236" y="72" width="64" height="30"/>
+                                <rect key="frame" x="240" y="72" width="64" height="30"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
                                     <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9z-6Q-ZQV"/>
@@ -49,9 +50,9 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Qty" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rgs-vg-a8Z">
                                                     <rect key="frame" x="134" y="7" width="70" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
-                                                        <action selector="saveQtyToArray:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="c6H-LE-Bro"/>
+                                                        <action selector="saveQtyToArray:" destination="BYZ-38-t0r" eventType="editingChanged" id="uci-TE-lvr"/>
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Qty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usK-yC-VtY">
@@ -99,9 +100,13 @@
                                 </connections>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Yield" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lnZ-gf-gkl">
-                                <rect key="frame" x="20" y="72" width="83" height="30"/>
+                                <rect key="frame" x="16" y="72" width="81" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cVi-JD-IyB"/>
+                                    <constraint firstAttribute="width" constant="80" id="t0o-Lk-kf0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -110,15 +115,17 @@
                             <constraint firstItem="KHl-tj-FaX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="02b-jV-I7L"/>
                             <constraint firstAttribute="trailingMargin" secondItem="12g-n3-wd4" secondAttribute="trailing" id="6yZ-Ig-OWi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KHl-tj-FaX" secondAttribute="trailing" constant="-20" id="Iu7-Aq-Z7m"/>
+                            <constraint firstItem="12g-n3-wd4" firstAttribute="top" secondItem="9bd-yX-82x" secondAttribute="bottom" constant="8" id="LsC-MQ-Kht"/>
                             <constraint firstItem="v5M-66-Kyr" firstAttribute="leading" secondItem="lnZ-gf-gkl" secondAttribute="trailing" constant="8" symbolic="YES" id="Mbn-ja-ca3"/>
-                            <constraint firstItem="KHl-tj-FaX" firstAttribute="top" secondItem="lnZ-gf-gkl" secondAttribute="bottom" constant="8" id="RGh-Fm-hWZ"/>
+                            <constraint firstItem="KHl-tj-FaX" firstAttribute="top" secondItem="lnZ-gf-gkl" secondAttribute="bottom" constant="16" id="RGh-Fm-hWZ"/>
                             <constraint firstItem="KHl-tj-FaX" firstAttribute="bottom" secondItem="wwe-YC-Gya" secondAttribute="top" id="Rvo-mU-u3s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KHl-tj-FaX" secondAttribute="trailing" constant="-20" id="aQL-4l-Skj"/>
                             <constraint firstItem="KHl-tj-FaX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="hFV-BB-Dvj"/>
                             <constraint firstItem="KHl-tj-FaX" firstAttribute="top" secondItem="12g-n3-wd4" secondAttribute="bottom" constant="8" id="noF-Wa-BOq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="lnZ-gf-gkl" secondAttribute="leading" id="oSg-DF-1hc"/>
+                            <constraint firstItem="lnZ-gf-gkl" firstAttribute="top" secondItem="9bd-yX-82x" secondAttribute="bottom" constant="8" id="qFO-pz-Q1F"/>
+                            <constraint firstItem="v5M-66-Kyr" firstAttribute="top" secondItem="9bd-yX-82x" secondAttribute="bottom" constant="8" id="yEH-LS-GSQ"/>
                             <constraint firstItem="v5M-66-Kyr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="111" id="zBh-ui-CKf"/>
-                            <constraint firstItem="KHl-tj-FaX" firstAttribute="top" secondItem="v5M-66-Kyr" secondAttribute="bottom" constant="8" id="zlh-Jo-5Yv"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="rYV-qT-UV4" appends="YES" id="BVc-Wr-6BR"/>
