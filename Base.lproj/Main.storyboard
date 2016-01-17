@@ -72,7 +72,6 @@
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
                                                         <action selector="createNewIngredientRow:" destination="BYZ-38-t0r" eventType="editingChanged" id="9vo-mo-Ju9"/>
-                                                        <action selector="createNewIngredientRow:" destination="dkx-z0-nzr" eventType="editingDidEnd" id="n21-7v-OIy"/>
                                                         <action selector="saveNameToArray:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="iRk-RC-CEV"/>
                                                     </connections>
                                                 </textField>
